@@ -37,5 +37,9 @@ public enum Item
     PlaneFilter,
     QuantumChip,
     FrameMaterial,
-    AdvancedMiningMachine
+
+    AdvancedMiningMachine,
+    PlaneSmelter,
+    AssemblerMk3,
+    QuantumChemicalPlant
 }

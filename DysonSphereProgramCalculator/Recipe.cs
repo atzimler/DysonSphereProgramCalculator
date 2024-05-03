@@ -2,18 +2,33 @@ namespace DysonSphereProgramCalculator;
 
 public class Recipe
 {
-    private int _baseCraftingTime; // x * 0.1 seconds
     private readonly List<ItemQuantity> _materials = new();
-    private readonly ItemQuantity _result;
 
+    public int BaseTime { get; } // x * 0.1 seconds
+    public FacilityType MadeIn { get; }
+    public bool IsResource { get; }
     public IReadOnlyList<ItemQuantity> Materials => _materials;
     // TODO: More than just one thing might result from it
-    public ItemQuantity Result => _result;
+    public ItemQuantity Result { get; }
 
-    public Recipe(ItemQuantity result, int baseCraftingTime, IEnumerable<ItemQuantity> materials)
+    public Recipe(Item result, int baseTime, FacilityType madeIn, IEnumerable<ItemQuantity> materials)
+        : this(new ItemQuantity(result), baseTime, madeIn, materials)
     {
-        _result = result;
-        _baseCraftingTime = baseCraftingTime;
+    }
+    
+    public Recipe(ItemQuantity result, int baseTime, FacilityType madeIn, IEnumerable<ItemQuantity> materials)
+    {
+        MadeIn = madeIn;
+        Result = result;
+        BaseTime = baseTime;
         _materials.AddRange(materials);
+    }
+
+    public Recipe(Item item)
+    {
+        MadeIn = FacilityType.Resource;
+        Result = new ItemQuantity(item);
+        BaseTime = -1;
+        IsResource = true;
     }
 }
