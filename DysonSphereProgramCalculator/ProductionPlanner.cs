@@ -2,11 +2,11 @@ using System.Text;
 
 namespace DysonSphereProgramCalculator;
 
-public class ProductionPlanner
+public class ProductionPlanner(RecipeCollection recipeCollection)
 {
     private ItemQuantity FacilityCount(BuildTreeNode node, decimal cycleTime)
     {
-        var recipe = RecipeCollection.Recipes[node.ItemQuantity.Item];
+        var recipe = recipeCollection.Recipes[node.ItemQuantity.Item];
         var facility = FacilityCollection.Facilities[recipe.MadeIn];
 
         var requiredAmount = node.ItemQuantity.Quantity;

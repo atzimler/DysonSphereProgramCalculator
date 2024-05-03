@@ -1,11 +1,11 @@
 namespace DysonSphereProgramCalculator;
 
-public static class BuildTreeFactory
+public class BuildTreeFactory(RecipeCollection recipeCollection)
 {
-    private static void AddRecipeToBuildTreeNode(BuildTreeNode node, ItemQuantity itemQuantity)
+    private void AddRecipeToBuildTreeNode(BuildTreeNode node, ItemQuantity itemQuantity)
     {
         node.ItemQuantity = itemQuantity;
-        var recipe = RecipeCollection.Recipes[itemQuantity.Item];
+        var recipe = recipeCollection.Recipes[itemQuantity.Item];
         var multiplier = (int)Math.Ceiling(1.0m * itemQuantity.Quantity / recipe.Result.Quantity);
 
         foreach (var material in recipe.Materials)
@@ -17,7 +17,7 @@ public static class BuildTreeFactory
         }
     }
     
-    public static BuildTree CreateForRecipe(Item item)
+    public BuildTree CreateForRecipe(Item item)
     {
         var result = new BuildTree
         {

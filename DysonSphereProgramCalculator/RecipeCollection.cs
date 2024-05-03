@@ -1,8 +1,8 @@
 namespace DysonSphereProgramCalculator;
 
-public static class RecipeCollection
+public class RecipeCollection
 {
-    private static List<Recipe> Data =
+    private static readonly List<Recipe> OfficialData =
     [
         new Recipe(Item.IronOre),
         new Recipe(Item.CopperOre),
@@ -137,10 +137,13 @@ public static class RecipeCollection
         ])
     ];
 
-    public static readonly Dictionary<Item, Recipe> Recipes;
+    public readonly Dictionary<Item, Recipe> Recipes;
     
-    static RecipeCollection()
+    public RecipeCollection()
     {
-        Recipes = Data.ToDictionary(_ => _.Result.Item, _ => _);
+        var recipeData = new List<Recipe>();
+        recipeData.AddRange(OfficialData);
+        
+        Recipes = recipeData.ToDictionary(_ => _.Result.Item, _ => _);
     }
 }
