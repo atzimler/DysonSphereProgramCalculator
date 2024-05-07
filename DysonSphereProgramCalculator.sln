@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DysonSphereProgramCalculator", "DysonSphereProgramCalculator\DysonSphereProgramCalculator.csproj", "{05DE830F-8FEE-449E-98D1-9D00DEEBC94C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Files", "Solution Files", "{073BA228-15BF-4D18-85A3-123927C06182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

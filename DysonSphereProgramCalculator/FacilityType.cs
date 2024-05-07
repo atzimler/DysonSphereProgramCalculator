@@ -2,8 +2,10 @@ namespace DysonSphereProgramCalculator;
 
 public enum FacilityType
 {
-    Resource,
     Assembler,
-    Smelter,
-    ChemicalPlant
+    ChemicalPlant,
+    ParticleCollider,
+    ResearchLab,
+    Resource,
+    Smelter
 }
