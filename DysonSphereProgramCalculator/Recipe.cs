@@ -11,11 +11,6 @@ public class Recipe
     // TODO: More than just one thing might result from it
     public ItemQuantity Result { get; }
 
-    public Recipe(Item result, int baseTime, FacilityType madeIn, IEnumerable<ItemQuantity> materials)
-        : this(new ItemQuantity(result), baseTime, madeIn, materials)
-    {
-    }
-    
     public Recipe(ItemQuantity result, int baseTime, FacilityType madeIn, IEnumerable<ItemQuantity> materials)
     {
         MadeIn = madeIn;

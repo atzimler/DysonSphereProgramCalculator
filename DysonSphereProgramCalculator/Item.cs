@@ -60,7 +60,9 @@ public enum Item
     AssemblerMk3,
     ParticleCollider,
     PlaneSmelter,
+    PlanetaryLogisticsStation,
     PlanetaryShieldGenerator,
+    RayReceiver,
     ResearchLab,
     QuantumChemicalPlant
 }

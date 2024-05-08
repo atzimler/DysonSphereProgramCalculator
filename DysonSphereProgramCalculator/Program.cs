@@ -6,11 +6,11 @@ public static class Program
 {
     private static void Main(string[] args)
     {
-        var recipeCollection = new RecipeCollection(new[] { Item.DysonSphereComponent, Item.DeuteronFuelRod, Item.QuantumChip });
+        var recipeCollection = new RecipeCollection(new[] { Item.Processor });
         // var recipeCollection = new RecipeCollection(Array.Empty<Item>());
         var buildTreeFactory = new BuildTreeFactory(recipeCollection);
-        var buildTree = buildTreeFactory.CreateForRecipe(Item.AntimatterFuelRod);
-        var targetCycleTime = 4m;
+        var buildTree = buildTreeFactory.CreateForRecipe(Item.PlanetaryLogisticsStation);
+        var targetCycleTime = 16m;
 
         var resourceCalculator = new ResourceCalculator();
         resourceCalculator.Calculate(buildTree.Root);

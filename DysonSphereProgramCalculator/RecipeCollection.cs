@@ -25,15 +25,15 @@ public class RecipeCollection
 
         #region Items and Materials
         new Recipe(Item.AnnihilationConstraintSphere, 200, FacilityType.Assembler, [
-            new ItemQuantity(Item.ParticleContainer),
-            new ItemQuantity(Item.Processor)
+            Item.ParticleContainer,
+            Item.Processor
         ]),
         
         new Recipe(new ItemQuantity(Item.AntimatterFuelRod, 2), 240, FacilityType.Assembler, [
             new ItemQuantity(Item.Antimatter, 12),
             new ItemQuantity(Item.Hydrogen, 12),
-            new ItemQuantity(Item.AnnihilationConstraintSphere),
-            new ItemQuantity(Item.TitaniumAlloy)
+            Item.AnnihilationConstraintSphere,
+            Item.TitaniumAlloy
         ]),
         
         // TODO: This creates the same amount of Hydrogen too, so it can be used for the antimatter fuel rod
@@ -53,15 +53,15 @@ public class RecipeCollection
         
         new Recipe(new ItemQuantity(Item.CircuitBoard, 2), 10, FacilityType.Assembler, [
             new ItemQuantity(Item.IronIngot, 2),
-            new ItemQuantity(Item.CopperIngot)
+            Item.CopperIngot
         ]),
         
         new Recipe(Item.CopperIngot, 10, FacilityType.Smelter, [
-            new ItemQuantity(Item.CopperOre)
+            Item.CopperOre
         ]),
         
         new Recipe(new ItemQuantity(Item.Diamond, 2), 15, FacilityType.Smelter, [
-            new ItemQuantity(Item.KimberliteOre)
+            Item.KimberliteOre
         ]),
         
         new Recipe(new ItemQuantity(Item.Deuterium, 5), 25, FacilityType.ParticleCollider, [
@@ -69,7 +69,7 @@ public class RecipeCollection
         ]),
         
         new Recipe(new ItemQuantity(Item.DeuteronFuelRod, 2), 120, FacilityType.Assembler, [
-            new ItemQuantity(Item.TitaniumAlloy),
+            Item.TitaniumAlloy,
             new ItemQuantity(Item.Deuterium, 20),
             new ItemQuantity(Item.SuperMagneticRing)
         ]),
@@ -82,8 +82,8 @@ public class RecipeCollection
         
         new Recipe(Item.ElectricMotor, 20, FacilityType.Assembler, [
             new ItemQuantity(Item.IronIngot, 2),
-            new ItemQuantity(Item.Gear),
-            new ItemQuantity(Item.MagneticCoil)
+            Item.Gear,
+            Item.MagneticCoil
         ]),
         
         new Recipe(Item.ElectromagneticTurbine, 20, FacilityType.Assembler, [
@@ -97,12 +97,12 @@ public class RecipeCollection
         
         new Recipe(Item.FrameMaterial, 60, FacilityType.Assembler, [
             new ItemQuantity(Item.CarbonNanotube, 4),
-            new ItemQuantity(Item.TitaniumAlloy),
-            new ItemQuantity(Item.HighPuritySilicon)
+            Item.TitaniumAlloy,
+            Item.HighPuritySilicon
         ]),
         
         new Recipe(Item.Gear, 10, FacilityType.Assembler, [
-            new ItemQuantity(Item.IronIngot)
+            Item.IronIngot
         ]),
         
         new Recipe(Item.Glass, 20, FacilityType.Smelter, [
@@ -116,12 +116,12 @@ public class RecipeCollection
         
         new Recipe(Item.GravitonLens, 60, FacilityType.Assembler, [
             new ItemQuantity(Item.Diamond, 4),
-            new ItemQuantity(Item.StrangeMatter)
+            Item.StrangeMatter
         ]),
         
         new Recipe(new ItemQuantity(Item.GravityMatrix, 2), 240, FacilityType.ResearchLab, [
-            new ItemQuantity(Item.GravitonLens),
-            new ItemQuantity(Item.QuantumChip)
+            Item.GravitonLens,
+            Item.QuantumChip
         ]),
         
         new Recipe(Item.HighPuritySilicon, 20, FacilityType.Smelter, [
@@ -129,21 +129,21 @@ public class RecipeCollection
         ]),
         
         new Recipe(Item.IronIngot, 10, FacilityType.Smelter, [
-            new ItemQuantity(Item.IronOre)        
+            Item.IronOre        
         ]),
         
         new Recipe(Item.Magnet, 15, FacilityType.Smelter, [
-            new ItemQuantity(Item.IronOre)
+            Item.IronOre
         ]),
         
         new Recipe(new ItemQuantity(Item.MagneticCoil, 2), 10, FacilityType.Assembler, [
             new ItemQuantity(Item.Magnet, 2),
-            new ItemQuantity(Item.CopperIngot)
+            Item.CopperIngot
         ]),
         
         new Recipe(Item.MicrocrystallineComponent, 20, FacilityType.Assembler, [
             new ItemQuantity(Item.HighPuritySilicon, 2),
-            new ItemQuantity(Item.CopperIngot)
+            Item.CopperIngot
         ]),
         
         new Recipe(Item.ParticleContainer, 40, FacilityType.Assembler, [
@@ -152,14 +152,12 @@ public class RecipeCollection
         ]),
         
         new Recipe(Item.PhotonCombiner, 30, FacilityType.Assembler, [
-            new ItemQuantity(Item.GraftingCrystal),
-            // TODO: The code could look cleaner if the new ItemQuantity(x) would be an implicit conversion
-            // That would also allow to eliminate the Item based ctor for Recipe.
-            new ItemQuantity(Item.CircuitBoard)
+            Item.GraftingCrystal,
+            Item.CircuitBoard
         ]),
         
         new Recipe(Item.PlaneFilter, 120, FacilityType.Assembler, [
-            new ItemQuantity(Item.CasimirCrystal),
+            Item.CasimirCrystal,
             new ItemQuantity(Item.TitaniumGlass, 2)
         ]),
         
@@ -180,8 +178,8 @@ public class RecipeCollection
         ]),
         
         new Recipe(new ItemQuantity(Item.SolarSail, 2), 40, FacilityType.Assembler, [
-            new ItemQuantity(Item.Graphene),
-            new ItemQuantity(Item.PhotonCombiner)
+            Item.Graphene,
+            Item.PhotonCombiner
         ]),
         
         new Recipe(Item.Steel, 30, FacilityType.Smelter, [
@@ -197,7 +195,7 @@ public class RecipeCollection
         new Recipe(Item.SuperMagneticRing, 30, FacilityType.Assembler, [
             new ItemQuantity(Item.ElectromagneticTurbine, 2),
             new ItemQuantity(Item.Magnet, 3),
-            new ItemQuantity(Item.EnergeticGraphite)
+            Item.EnergeticGraphite
         ]),
         
         new Recipe(new ItemQuantity(Item.TitaniumAlloy, 4), 120, FacilityType.Smelter, [
@@ -226,11 +224,26 @@ public class RecipeCollection
             new ItemQuantity(Item.GraftingCrystal, 40)
         ]),
         
+        new Recipe(Item.PlanetaryLogisticsStation, 200, FacilityType.Assembler, [
+            new ItemQuantity(Item.Steel, 40),
+            new ItemQuantity(Item.TitaniumIngot, 40),
+            new ItemQuantity(Item.Processor, 40),
+            new ItemQuantity(Item.ParticleContainer, 20)
+        ]),
+        
         new Recipe(Item.PlanetaryShieldGenerator, 100, FacilityType.Assembler, [
             new ItemQuantity(Item.Steel, 20),
             new ItemQuantity(Item.ElectromagneticTurbine, 20),
             new ItemQuantity(Item.SuperMagneticRing, 5),
             new ItemQuantity(Item.ParticleContainer, 5)
+        ]),
+        
+        new Recipe(Item.RayReceiver, 80, FacilityType.Assembler, [
+            new ItemQuantity(Item.Steel, 20),
+            new ItemQuantity(Item.HighPuritySilicon, 20),
+            new ItemQuantity(Item.PhotonCombiner, 10),
+            new ItemQuantity(Item.Processor, 5),
+            new ItemQuantity(Item.SuperMagneticRing, 20)
         ])
         #endregion
     ];
