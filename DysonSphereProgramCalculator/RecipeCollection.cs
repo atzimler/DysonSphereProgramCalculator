@@ -10,6 +10,7 @@ public class RecipeCollection
         new Recipe(Item.CopperOre),
         new Recipe(Item.CriticalPhoton),
         new Recipe(Item.FireIce),
+        new Recipe(Item.FractalSilicon),
         new Recipe(Item.GraftingCrystal),
         new Recipe(Item.Hydrogen),
         new Recipe(Item.IronOre),
@@ -59,6 +60,10 @@ public class RecipeCollection
         
         new Recipe(Item.CopperIngot, 10, FacilityType.Smelter, [
             Item.CopperOre
+        ]),
+        
+        new Recipe(new ItemQuantity(Item.CrystalSilicon, 2), 15, FacilityType.Assembler, [
+            Item.FractalSilicon
         ]),
         
         new Recipe(new ItemQuantity(Item.Diamond, 2), 15, FacilityType.Smelter, [
@@ -129,6 +134,11 @@ public class RecipeCollection
             new ItemQuantity(Item.SiliconOre, 2)
         ]),
         
+        new Recipe(Item.InformationMatrix, 100, FacilityType.ResearchLab, [
+            new ItemQuantity(Item.Processor, 2),
+            Item.ParticleBroadband
+        ]),
+        
         new Recipe(Item.IronIngot, 10, FacilityType.Smelter, [
             Item.IronOre        
         ]),
@@ -147,6 +157,12 @@ public class RecipeCollection
             Item.CopperIngot
         ]),
         
+        new Recipe(Item.ParticleBroadband, 80, FacilityType.Assembler, [
+            new ItemQuantity(Item.CarbonNanotube, 2),
+            new ItemQuantity(Item.CrystalSilicon, 2),
+            Item.Plastic
+        ]),
+        
         new Recipe(Item.ParticleContainer, 40, FacilityType.Assembler, [
             new ItemQuantity(Item.UnipolarMagnet, 10),
             new ItemQuantity(Item.CopperIngot, 2)
@@ -160,6 +176,11 @@ public class RecipeCollection
         new Recipe(Item.PlaneFilter, 120, FacilityType.Assembler, [
             Item.CasimirCrystal,
             new ItemQuantity(Item.TitaniumGlass, 2)
+        ]),
+        
+        new Recipe(Item.Plastic, 30, FacilityType.ChemicalPlant, [
+            new ItemQuantity(Item.Oil, 2),
+            Item.EnergeticGraphite
         ]),
         
         new Recipe(Item.Processor, 30, FacilityType.Assembler, [

@@ -6,10 +6,10 @@ public static class Program
 {
     private static void Main(string[] args)
     {
-        var recipeCollection = new RecipeCollection(new[] { Item.Processor });
+        var recipeCollection = new RecipeCollection(new[] { Item.Oil });
         // var recipeCollection = new RecipeCollection(Array.Empty<Item>());
         var buildTreeFactory = new BuildTreeFactory(recipeCollection);
-        var buildTree = buildTreeFactory.CreateForRecipe(Item.StructureMatrix);
+        var buildTree = buildTreeFactory.CreateForRecipe(Item.InformationMatrix);
         var targetCycleTime = 1m;
 
         var resourceCalculator = new ResourceCalculator();
