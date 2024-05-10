@@ -14,6 +14,7 @@ public class RecipeCollection
         new Recipe(Item.Hydrogen),
         new Recipe(Item.IronOre),
         new Recipe(Item.KimberliteOre),
+        new Recipe(Item.OrganicCrystal),
         new Recipe(Item.Stone),
         new Recipe(Item.SiliconOre),
         new Recipe(Item.StalagmiteCrystal),
@@ -192,6 +193,11 @@ public class RecipeCollection
             new ItemQuantity(Item.Deuterium, 10)
         ]),
         
+        new Recipe(Item.StructureMatrix, 80, FacilityType.ResearchLab, [
+            Item.Diamond,
+            Item.TitaniumCrystal
+        ]),
+        
         new Recipe(Item.SuperMagneticRing, 30, FacilityType.Assembler, [
             new ItemQuantity(Item.ElectromagneticTurbine, 2),
             new ItemQuantity(Item.Magnet, 3),
@@ -202,6 +208,11 @@ public class RecipeCollection
             new ItemQuantity(Item.TitaniumIngot, 4),
             new ItemQuantity(Item.Steel, 4),
             new ItemQuantity(Item.SulfuricAcid, 8)
+        ]),
+        
+        new Recipe(Item.TitaniumCrystal, 40, FacilityType.Assembler, [
+            Item.OrganicCrystal,
+            new ItemQuantity(Item.TitaniumIngot, 3)
         ]),
         
         new Recipe(new ItemQuantity(Item.TitaniumGlass, 2), 50, FacilityType.Assembler, [

@@ -9,8 +9,8 @@ public static class Program
         var recipeCollection = new RecipeCollection(new[] { Item.Processor });
         // var recipeCollection = new RecipeCollection(Array.Empty<Item>());
         var buildTreeFactory = new BuildTreeFactory(recipeCollection);
-        var buildTree = buildTreeFactory.CreateForRecipe(Item.PlanetaryLogisticsStation);
-        var targetCycleTime = 16m;
+        var buildTree = buildTreeFactory.CreateForRecipe(Item.StructureMatrix);
+        var targetCycleTime = 1m;
 
         var resourceCalculator = new ResourceCalculator();
         resourceCalculator.Calculate(buildTree.Root);
